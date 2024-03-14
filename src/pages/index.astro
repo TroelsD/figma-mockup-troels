@@ -1,0 +1,166 @@
+---
+
+import Abouttop from "../components/Abouttop.astro";
+import Content from "../components/Content.astro";
+import Touch from "../components/Touch.astro";
+import Card from "../components/Card.astro";
+import Video from "../components/Video.astro";
+import Personal from "../components/Personal.astro";
+import Card1 from "../components/Card1.astro";
+import Header from "../components/Header.astro";
+import Weird from "../components/Weird.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/src/styles/global.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<title>Astro</title>
+	</head>
+	<body>
+			<Header />
+		<section class="topp">
+
+		
+	
+		<Abouttop />
+		</section>
+	
+		<section class="page">
+
+		<Content />
+		</section>
+		<main>
+		<section class="touch">
+			<Touch />
+
+		</section>
+		<section class="cards">
+			<Card img="images/Icon1.svg" header="Creative Ideas" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."  />
+			<Card img="images/Icon2.svg" header="Best Features" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."  />
+			<Card img="images/Icon3.svg" header="Experience" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."  />
+			<Card img="images/Icon4.svg" header="Easy Solutions" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."  />
+		</section>
+
+		<section class="video ">
+			<Video />
+		</section>
+
+		<section class="person">
+			<Personal />
+			<div class="flex">
+			<Card1 img="images/sara.png" header="Sara Jasmine" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+			<Card1 img="images/markus.png" header="John Carter" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+			<Card1 img="images/daisy.png" header="Daisy Stella" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+		</div>
+		</section>
+		<section class="weird">
+			<Weird />
+		</section>
+	</main>
+	</body>
+</html>
+
+<style>
+	
+	body{
+
+		overflow-x: hidden;
+		margin: 0;
+				              display: grid;
+  gap: 5rem;
+  grid-template-columns:
+   1fr minmax(0, 1200px) 1fr;
+  
+  > * {
+    grid-column: 2;
+  }
+	
+	}
+
+
+	
+
+	.flex {
+		   display: flex;
+		   flex-wrap: wrap;
+       
+        justify-content: space-between;
+		
+        align-items: center;
+        text-align: center;
+		
+        margin: 0rem;
+		padding-top: 1rem;
+	}
+	.video {
+		padding: 6.5rem;
+	}
+
+	.person {
+
+	padding: 6.5rem;
+	
+ 	background-color: var(--secondary01);
+
+	}
+
+.cards  {
+		
+
+	display: grid;
+   grid-template-columns: repeat(auto-fill, 18rem);
+   
+	width: 100vw;
+	grid-column: 1 / -1;
+   
+   padding-top: 0;
+   align-items: center;
+
+
+  background: var(--secondary01);
+
+ 
+  
+	}
+
+	.page {
+		  
+		
+		 display: grid;
+  place-items: center;
+  padding: 6.5rem;
+	}
+
+	.touch {
+		background-color: var(--secondary01);
+		display: flex;
+		justify-content: center;
+		
+		
+
+  padding: 6.5rem;
+  width: 100vw;
+	grid-column: 1 / -1;
+  padding-bottom: 2rem;
+	}
+
+	.topp {
+	width: 100vw;
+	grid-column: 1 / -1;
+		
+	}
+
+	
+</style>

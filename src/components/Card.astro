@@ -1,0 +1,112 @@
+---
+const img = Astro.props.img;
+const header = Astro.props.header;
+const text = Astro.props.text;
+---
+
+
+
+    <div class="cardcontainer">
+        <div class="card">
+            <img src={img} alt="Billede">
+            <h6>{header}</h6>
+            <p>{text}</p>
+            <div class="mere">
+                <a href="/casesingle">Read more</a>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>     
+
+                
+  
+
+
+    <style>
+
+     
+
+
+.cardcontainer {
+ 
+   display: flex;
+   justify-content: space-evenly;
+   
+   align-self: flex-start;
+   
+
+
+}
+.cardtext {
+    display: block;
+    
+}
+.title {
+    background-color: var(--primary01);
+    width: fit-content;
+    padding: 0px 12px;
+    border-radius: 10px;
+  color: #181818;
+
+
+
+
+font-style: normal;
+font-weight: 400;
+line-height: 147.5%; /* 1.475rem */
+letter-spacing: 0.145rem;
+text-transform: uppercase;
+}
+
+
+
+.container {
+    width: 72rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
+
+
+
+        .mere {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    
+        .card {
+            background-color: var( --secondary02);
+            padding: 2.5rem 1.4375rem;
+              
+            border-radius: 1.25rem;
+            border: 1px solid #EAEAEA;
+            width: 14.4rem;
+            align-items: baseline;
+            height: fit-content;
+         
+        }
+
+  
+
+        .tekst {
+            width: 60%;
+        }
+
+
+    .card:hover {
+        scale: 1.01;
+        transition: 200ms;
+    }
+
+    
+
+    
+    </style>
+
+    
+             

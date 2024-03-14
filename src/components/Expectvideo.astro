@@ -1,0 +1,113 @@
+
+
+<div class="container">
+<figure>
+  <img class="play" src="images/PlayButton.svg" alt="">
+   <img src="images/Photo.png" alt="">
+   <div class="yellow-figure"></div>
+</figure>
+</div>
+
+
+
+<style>
+    :root {
+  --square-pattern: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red"><path d="M7.47662 4.02206C6.50635 3.05178 5.53232 2.07774 4.56205 1.10745C4.28482 0.83023 3.80905 0.83023 3.53183 1.10745C2.56155 2.07774 1.59128 3.04803 0.621002 4.02206C0.343781 4.29929 0.343781 4.77506 0.621002 5.05229C1.59128 6.02258 2.5653 6.99661 3.53558 7.9669C3.8128 8.24412 4.28857 8.24412 4.56579 7.9669C5.53607 6.99661 6.51009 6.02258 7.48037 5.05229C7.63022 4.90244 7.69016 4.73011 7.69016 4.56527C7.69016 4.55403 7.69016 4.54654 7.69016 4.5353C7.69016 4.52781 7.69016 4.51657 7.69016 4.50908C7.69016 4.34424 7.63022 4.17191 7.47662 4.02206ZM4.04881 6.41968C3.41944 5.79031 2.79382 5.16468 2.16445 4.5353C2.79382 3.90593 3.41944 3.2803 4.04881 2.65092C4.67818 3.2803 5.3038 3.90593 5.93317 4.5353C5.3038 5.16468 4.67818 5.79031 4.04881 6.41968Z"/></svg>');
+ --checkmark-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M9.71 11.29a1 1 0 0 0-1.42 1.42l3 3A1 1 0 0 0 12 16a1 1 0 0 0 .72-.34l7-8a1 1 0 0 0-1.5-1.32L12 13.54z' fill='%2324B47E'></path><path d='M21 11a1 1 0 0 0-1 1 8 8 0 0 1-8 8A8 8 0 0 1 6.33 6.36 7.93 7.93 0 0 1 12 4a8.79 8.79 0 0 1 1.9.22 1 1 0 1 0 .47-1.94A10.54 10.54 0 0 0 12 2a10 10 0 0 0-7 17.09A9.93 9.93 0 0 0 12 22a10 10 0 0 0 10-10 1 1 0 0 0-1-1z' fill='%23AFF1B6'></path></svg>");
+}
+
+img {
+    max-width: 800px;
+}
+
+
+
+.yellow-figure {
+  position: absolute;
+  bottom: -5.5%;
+  left: 85.5%;
+  background-color: yellow;
+
+  z-index: -1; /* Ensure it's above the background */
+   width: 140px;
+  height: 150px;
+  border-radius: 10px;
+}
+.play {
+    width: 100px;
+    position: absolute;
+    z-index: 99;
+   top: 5rem;
+   left: 43%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+
+   
+}
+
+
+
+.offerings {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+li {
+  position: relative;
+
+
+  
+  display: inline-flex;
+  justify-content: start;
+  grid-gap: 10px;
+  font-size: 17px;
+}
+
+li:before {
+  content: '';
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-image: var(--checkmark-icon);
+}
+
+figure {
+  position: relative;
+  z-index: 1;
+}
+
+figure::before {
+  --square-count: 10;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: -60px; /* Adjust as needed */
+  left: -60px; /* Adjust as needed */
+  width: calc(var(--square-count) * 1.34rem - .67rem);
+  height: calc(var(--square-count) * 1.34rem - .67rem);
+  background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+  mask:
+    var(--square-pattern) 0 0 / 1.34rem 1.34rem,
+    var(--square-pattern) .67rem .67rem / 1.34rem 1.34rem;
+}
+
+figure::after {
+  content: '';
+  position: absolute;
+  left: -1.8rem;
+  bottom: 8.5rem;
+  background: green;
+  width: 140px;
+  height: 150px;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+
+
+</style>

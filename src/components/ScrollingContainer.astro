@@ -1,0 +1,75 @@
+---
+const { cardContent } = Astro.props;
+---
+
+ 
+        
+<div class="scroller">
+<ul class="full-width">
+ {
+    cardContent.map((card) => (
+      <li>
+        <img src={card.img} alt="">
+        <h6>{card.title}</h6>
+        <p>{card.body}</p>
+      </li>
+    ))
+  }
+
+</ul>
+</div>
+
+
+<style>
+
+
+  .scroller h6 {
+
+   margin-top: 2.1rem;
+   margin-bottom: 1.8rem;
+
+  }
+
+  .scroller img {
+    border-radius: 0px;
+  }
+
+
+
+  .scroller {
+    overflow-x: auto;
+    scroll-snap-align: center; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling on x-axis */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    display: flex; /* Ensure flex behavior */
+    justify-content: start; /* Align children at the start */
+    gap: 2rem;
+    padding-inline: max(1rem, 50% - var(--content-width) / 2.4);
+
+
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    overflow: visible; /* Allow items to overflow the container */
+  }
+
+  li {
+    flex: 0 0 auto; /* Prevent items from stretching */
+    border-radius: 1.25rem;
+background: #EBEBEB;
+    padding: 2.2rem;
+    width: 18.3rem;
+    height: fit-content;
+    
+    scroll-snap-align: center; /* Align items to the center */
+  }
+
+
+</style>
+
+

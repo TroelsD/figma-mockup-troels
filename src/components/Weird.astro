@@ -1,0 +1,85 @@
+---
+import Button3 from "./Button3.astro"
+import Bweird from "./Bweird.astro"
+---
+
+
+<div class="wrapper">
+<div class="container">
+    <div class="tekst">
+    <p class="titlegreen">BOOK NOW</p>
+    <h3>Better Consult, <span>Better</span> <br> Results</h3>
+    <p class="tekst1">Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative – drop us a note and join our team!</p>
+    <Button3 img="images/mobil.svg" text="+800 1234 654 "  />
+    </div>
+    <div class="bcontainer">
+    <Bweird />
+    </div>
+  
+
+</div>
+</div>
+
+<style>
+
+
+
+    .tekst1{
+        color: white;
+        width: 50ch;
+    }
+
+    .bcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+       margin-top: 5rem;
+    }
+
+
+
+
+
+  
+
+    .tekst {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 0.1rem;
+        
+      
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .container {
+        background: #181818;
+       border-radius: 1.875rem;
+        max-width: 1150px;
+        padding: 3rem;
+        padding-top: 1rem;
+       gap: 12rem;
+       
+        display: flex;
+        justify-content:start;
+       
+    }
+
+    h3 {
+        color: white;
+        line-height: normal;
+        margin: 0;
+    }
+
+    span {
+        color: rgb(169, 169, 169);
+        font-size: 40px;
+    }
+
+
+</style>

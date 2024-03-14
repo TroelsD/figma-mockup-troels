@@ -1,0 +1,201 @@
+<div class="container">
+    <div class="faq">
+    <p class="titlegreen">FAQ</p>
+    </div>
+  <h2>Customer Questions</h2>
+   <div class="quest"> <!-- Changed class name from "accordion" to "quest" -->
+        <div class="quest-item"> <!-- Changed class name from "accordion-item" to "quest-item" -->
+            <button id="quest-button-1" aria-expanded="false"><span class="quest-title">What will happen when I’ve sent my application?</span><span class="icon" aria-hidden="true"></span></button>
+             
+            <div class="quest-content"> <!-- Changed class name from "accordion-content" to "quest-content" -->
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+        </div>
+          <div class="quest-item"> <!-- Changed class name from "accordion-item" to "quest-item" -->
+            <button id="quest-button-1" aria-expanded="false"><span class="quest-title">Can I get a free trial before I purchase?</span><span class="icon" aria-hidden="true"></span></button>
+          
+            <div class="quest-content"> <!-- Changed class name from "accordion-content" to "quest-content" -->
+                 <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+        </div>
+          <div class="quest-item"> <!-- Changed class name from "accordion-item" to "quest-item" -->
+            <button id="quest-button-1" aria-expanded="false"><span class="quest-title">What should I include in my personal statement?</span><span class="icon" aria-hidden="true"></span></button>
+        
+            <div class="quest-content"> <!-- Changed class name from "accordion-content" to "quest-content" -->
+                 <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+        </div>
+          <div class="quest-item"> <!-- Changed class name from "accordion-item" to "quest-item" -->
+            <button id="quest-button-1" aria-expanded="false"><span class="quest-title">Will membership plans be charged automatically?</span><span class="icon" aria-hidden="true"></span></button>
+            
+            <div class="quest-content"> <!-- Changed class name from "accordion-content" to "quest-content" -->
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+        </div>
+          <div class="quest-item"> <!-- Changed class name from "accordion-item" to "quest-item" -->
+            <button id="quest-button-1" aria-expanded="false"><span class="quest-title">What will happen when I’ve sent my application?</span><span class="icon" aria-hidden="true"></span></button>
+         
+            <div class="quest-content"> <!-- Changed class name from "accordion-content" to "quest-content" -->
+                 <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+        </div>
+          <div class="quest-item"> <!-- Changed class name from "accordion-item" to "quest-item" -->
+            <button id="quest-button-1" aria-expanded="false"><span class="quest-title">Can I get a free trial before I purchase?</span><span class="icon" aria-hidden="true"></span></button>
+            
+            <div class="quest-content"> <!-- Changed class name from "accordion-content" to "quest-content" -->
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+</div>
+
+<style>
+
+   
+    .faq, h2 {
+     display: grid;
+     place-items: center;
+    }
+
+
+   
+    .container {
+  margin: 0 auto;
+  padding: 9.4375rem 14.75rem;
+  max-width: 40rem;
+  border-radius: 1.875rem;
+background: #F5F5F5;
+}
+
+.quest {
+  .quest-item {
+    border-bottom: 1px solid $lightgray;
+    button[aria-expanded='true'] {
+      border-bottom: 1px solid $blue;
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: $text;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+   
+      }
+    }
+
+  
+    .quest-title {
+      padding: 1em 1.5em 0.5em 0;
+      font-weight: 500;
+       display: block; /* Change it to block to span the full width */
+    border-bottom: 1px solid #DADADA; /* Add a solid black line under the text */
+   
+
+    width: 100%; 
+    box-sizing: border-box;
+ 
+    
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 28px;
+      height: 38px;
+     
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 5px;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 0px;
+        left: 13.8px;
+        width: 2px;
+        height: 20px;
+        background: currentColor;
+      }
+    }
+  }
+  button[aria-expanded='true'] {
+  
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .quest-content {
+      opacity: 1;
+      max-height: 9em;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .quest-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 2em 0;
+    }
+  }
+
+  @media (max-width: 700px) {
+        .container {
+
+  padding: 1.4375rem 5.75rem;
+
+}
+
+.quest-title {
+    font-size: 1rem;
+}
+
+  }
+
+
+</style>
+
+<script>
+const items = document.querySelectorAll(".quest button"); // Changed selector from ".accordion button" to ".quest button"
+
+function toggleAccordion() {
+    const itemToggle = this.getAttribute('aria-expanded');
+  
+    for (let i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
+    }
+  
+    if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+    }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+</script>

@@ -1,0 +1,113 @@
+---
+import Button1 from "../components/Button1.astro";
+import Button2 from "../components/Button2.astro";
+import Casetop from "../components/Casetop.astro";
+
+import Content from "../components/Content.astro";
+import Teamtouch from "../components/Teamtouch.astro";
+import Card from "../components/Card.astro";
+import Video from "../components/Video.astro";
+import Personal from "../components/Personal.astro";
+import Case from "../components/Case.astro";
+import Casetext from "../components/Casetext.astro";
+import Email from "../components/Email.astro";
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Case Study Single</title>
+  </head>
+
+  <body>
+    <section class="top">
+      <Header />
+
+      <Casetop />
+    </section>
+    <section class="casetop">
+      <Case />
+      <Casetext />
+    </section>
+  </body>
+</html>
+
+<style>
+  .header {
+    display: grid;
+    place-items: center;
+  }
+  .casetop {
+    margin-top: 2rem;
+    display: grid;
+    place-items: center;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    gap: 5rem;
+    grid-template-columns: 2fr minmax(0, 1000px) 2fr;
+
+    > * {
+      grid-column: 2;
+    }
+
+    overflow-x: hidden;
+    background-color: var(--secondary02);
+  }
+  .email {
+    display: grid;
+    place-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .flex {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin: 0rem;
+    padding-top: 1rem;
+    grid-gap: 2rem;
+  }
+  .video {
+    padding: 6.5rem;
+  }
+  .person {
+    margin-top: -10rem;
+
+    padding: 6.5rem;
+    padding-top: 0.5rem;
+    background-color: var(--secondary02);
+  }
+  .top {
+    display: grid;
+    place-items: center;
+    align-items: start;
+
+    gap: 5rem;
+    grid-template-columns: 2fr minmax(0, 1000px) 2fr;
+
+    > * {
+      grid-column: 2;
+    }
+  }
+</style>

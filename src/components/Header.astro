@@ -1,0 +1,89 @@
+<header class="header">
+  <a href="/" class="logo"> Home</a>
+  <i class="bx bx-menu" id="menu-icon"></i>
+
+  <nav class="navbar">
+    <a href="team" class="active">Team</a>
+    <a href="casesingle">Case Study Single</a>
+    <a href="services">Service Single</a>
+  </nav>
+</header>
+
+<style>
+  .header {
+    width: 81%;
+    padding: 1.7rem 9%;
+    background: #181818e7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 900;
+    border-radius: 1rem;
+    position: fixed;
+    margin-top: 0.07rem;
+  }
+
+  .header.sticky {
+    border-bottom: 1rem solid rgba(0, 0, 0, 0.2);
+  }
+
+  .frontlogo {
+    text-align: center;
+    margin-top: 12rem;
+  }
+
+  .frontlogo img {
+    max-width: 35%;
+  }
+
+  .logo {
+    font-style: normal;
+    color: white;
+    font-weight: 600;
+    cursor: default;
+    text-decoration: none;
+  }
+
+  .navbar a {
+    margin-left: 4rem;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+  }
+
+  .scroll-down {
+    background: rgba(255, 255, 255, 0.759);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #181818;
+
+    font-weight: 430;
+  }
+
+  .navbar a:hover {
+    color: #ffcc4a;
+  }
+
+  .logo:hover {
+    color: #ffcc4a;
+  }
+
+  .navbar.active {
+    background-color: #000000fa;
+  }
+
+  #menu-icon {
+    display: none;
+  }
+</style>
+
+<script>
+  let menuIcon = document.querySelector("#menu-icon");
+  let navbar = document.querySelector(".navbar");
+
+  menuIcon.onclick = () => {
+    menuIcon.classList.toggle("bx-x");
+    navbar.classList.toggle("active");
+  };
+</script>

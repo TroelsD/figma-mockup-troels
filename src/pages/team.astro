@@ -1,0 +1,116 @@
+---
+import Button1 from "../components/Button1.astro";
+import Button2 from "../components/Button2.astro";
+import Abouttop from "../components/Abouttop.astro";
+import Teamtop from "../components/Teamtop.astro";
+import Content from "../components/Content.astro";
+import Teamtouch from "../components/Teamtouch.astro";
+import Card from "../components/Card.astro";
+import Video from "../components/Video.astro";
+import Personal from "../components/Personal.astro";
+import Card1 from "../components/Card1.astro";
+import Email from "../components/Email.astro";
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/src/styles/global.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+		<title>Astro</title>
+	</head>
+	<body>
+		<section class="top">
+
+		<Header />
+		<Teamtop />
+		</section>
+		
+
+
+	
+			<Teamtouch />
+			<div class="flex">
+                
+			<Card1 img="images/sara.png" header="Sara Jasmine" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+			<Card1 img="images/markus.png" header="John Carter" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+			
+            <Card1 img="images/daisy.png" header="Daisy Stella" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+            <Card1 img="images/Maya.png" header="Maya Elizabeth" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+			<Card1 img="images/Ryan.png" header="Ryan Jackson" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+			<Card1 img="images/Lilly.jpg" header="Lilly Victoria" text="Leverage agile frameworks to provide a robust synopsis for high level overviews." />
+		</div>
+	
+
+        <section class="email">
+            <Email />
+        </section>
+	
+	</body>
+</html>
+
+<style>
+
+    .top {
+        height: 75vh;
+    }
+	body{
+
+		overflow-x: hidden;
+        background-color: var(--secondary02);
+                     display: grid;
+             place-items: center;
+  gap: 5rem;
+  grid-template-columns:
+    2fr minmax(0, 1200px) 2fr;
+  
+  > * {
+    grid-column: 2;
+  }
+		
+	}
+
+    .email {
+        display: grid;
+        place-items: center;
+        padding-top: 3rem;
+             padding-bottom: 3rem;
+    }
+
+ 
+
+	.flex {
+		   display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+        
+        align-items: center;
+        text-align: center;
+        margin: 0rem;
+		padding-top: 1rem;
+        gap: 1.5rem;
+     
+	}
+
+	.person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    padding-top: 0.5rem;
+ 	background-color: var(--secondary02);
+
+	}
+
+
+
+
+</style>

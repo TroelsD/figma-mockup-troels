@@ -1,0 +1,80 @@
+<div class="block">
+    <p class="titlegreen"> Our History</p>
+    <h2>Better Website Means <br> A User Experience</h2>
+    <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused <br> on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+    </div>
+    <div class="videocontainer">
+    <img class="play" src="images/PlayButton.svg" alt="">
+      <figure>
+        
+        <img src="images/Photo.png" alt="">
+    </figure>
+</div>
+
+</div>
+
+
+
+<style>
+
+.videocontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       text-align: center;
+     
+        
+
+
+    }
+
+    p {
+        margin: 0.3rem;
+    }
+
+    h2 {
+        margin:1rem;
+    }
+
+    
+
+.play {
+    width: 100px;
+    position: absolute;
+    z-index: 99;
+}
+
+figure img {
+    max-width: 920px;
+  
+}
+
+figure {
+
+  
+  
+  display: block;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    right: 49.7rem;
+    top: 10.5rem;
+    background: var(--primary02);
+    inline-size: 150px;
+    block-size: 150px;
+    z-index: -1;
+    border-radius: 12px;
+  }
+}
+</style>

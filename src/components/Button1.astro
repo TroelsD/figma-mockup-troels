@@ -1,0 +1,40 @@
+---
+const img = Astro.props.img;
+const header = Astro.props.header;
+const text = Astro.props.text;
+---
+
+
+<button>
+    <p>{text}</p>
+</button>
+
+<style>
+    button {
+    border-radius: 42px;
+    background: #181818;
+    display: flex;
+    padding: 0px 33px;
+    align-items: flex-start;
+    gap: 10px;
+    }
+
+    button:hover {
+        border-radius: 42px;
+        border: 2px solid #181818;
+        background: #FFF; 
+    }
+
+    button:hover p {
+     color: #181818;
+    }
+
+    p {
+        color: #FFF;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    }
+</style>
